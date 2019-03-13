@@ -1,8 +1,6 @@
 #Our CLI Controller 
 
 class Fandango::CLI
-
-    #@showings = Fandango::Movies.showings
     
     def call 
         puts "Welcome to Fandango! Any night is a movie night!"
@@ -14,7 +12,7 @@ class Fandango::CLI
 
     def list_movies
         @showings = Fandango::Movies.showings
-        @showings.each.with_index(1) do |deal, i|
+        @showings.each.with_index(1) do |movies, i|
             puts "#{i}. #{movies.name} - #{movies.price} - #{movies.availability}"
         end 
     end 
@@ -27,7 +25,7 @@ class Fandango::CLI
         input = gets.strip.downcase
 
         if input.to_i > 0 
-        the_movies =  @movies[iput.to_i-1]
+        the_movies =  @showings[input.to_i-1]
         puts "#{the_movies.name} - #{the_movies.price} - #{the_movies.availability}"
         elsif inputs == "list"
             list_movies

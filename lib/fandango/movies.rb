@@ -1,10 +1,14 @@
+require_relative "../fandango/version"
+require 'open-uri'
+require 'nokogiri'
+
 class Fandango::Movies 
 
 attr_accessor :name, :price, :availability, :url 
 
     def self.showings
        # I should return a bunch of instances of Movies 
-       #Scape data and return movies based on data
+       #Scrape data and return movies based on data
     
         movie_1 = self.new
         movie_1.name = "What Men Want"
@@ -23,10 +27,13 @@ attr_accessor :name, :price, :availability, :url
 
     end 
 
-    def self.scape_movies 
+    def self.scrape_movies 
         movies = []
         #go to Fandango.com, find the movies
         #extract the properties
         #instantiate a deal 
+        doc = Nokogiri::HTML(open("https://fandango.com"))
+        binding.pry
     end 
-end     
+end  
+Fandango::Movies.scrape_movies
