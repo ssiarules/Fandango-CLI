@@ -1,7 +1,7 @@
-require_relative "../fandango/version"
-require 'open-uri'
+require_relative "./version"
 require 'nokogiri'
-
+require 'open-uri'
+require 'pry'
 class Fandango::Movies 
 
 attr_accessor :name, :price, :availability, :url 
@@ -32,7 +32,7 @@ attr_accessor :name, :price, :availability, :url
         #go to Fandango.com, find the movies
         #extract the properties
         #instantiate a deal 
-        doc = Nokogiri::HTML(open("https://fandango.com"))
+        doc = Nokogiri::HTML(open("https://www.fandango.com/"))
         binding.pry
     end 
 end  

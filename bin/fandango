@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby 
 
-require "bundler/setup"
-require "fandango"
+#require "bundler/setup"
+
+
+#changed this path
+require_relative "../lib/fandango.rb"
 
 Fandango::CLI.new.call 
-#require './lib/fandango'
