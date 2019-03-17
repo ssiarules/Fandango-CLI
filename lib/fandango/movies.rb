@@ -33,7 +33,11 @@ attr_accessor :name, :price, :availability, :url
         #extract the properties
         #instantiate a deal 
         doc = Nokogiri::HTML(open("https://www.fandango.com/"))
-        name = doc.search("h1.subnav__title heading-style-1 heading-size-xl").inner_text
+        names = doc.search("a.heading-style-1.heading-size-s.heading__movie-carousel")
+        names.each do |movie|
+          puts movie.text
+          #puts movie.attr("href")
+        end
         binding.pry
     end 
 end  
