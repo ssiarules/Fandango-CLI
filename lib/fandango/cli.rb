@@ -27,7 +27,7 @@ class Fandango::CLI
         if input.to_i > 0 
         the_movies =  @showings[input.to_i-1]
         puts "#{the_movies.name} - #{the_movies.price} - #{the_movies.availability}"
-        elsif inputs == "list"
+        elsif input == "list"
             list_movies
     else 
         puts "Not sure what you want, type list or exit."
