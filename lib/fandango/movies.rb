@@ -33,10 +33,12 @@ attr_accessor :name, :price, :availability, :url
         #extract the properties
         #instantiate a deal 
         doc = Nokogiri::HTML(open("https://www.fandango.com/"))
-        movies = doc.search("a.heading-style-1.heading-size-s.heading__movie-carousel")[0...2]
-          movies.each do |movie|
+        doc1 = Nokogiri::HTML(open("https://tickets.fandango.com/transaction/ticketing/express/ticketboxoffice.aspx?row_count=266828305&tid=AAWTJ&sdate=2019-03-17+16:45&mid=188283&from=mov_det_showtimes"))
+        name = doc.search("a.heading-style-1.heading-size-s.heading__movie-carousel")[0...2]
+          name.each do |movie|
             puts movie.text
             puts movie.attr("href")
+            price = doc1.search("td.pricePerTicket")[0].text 
    binding.pry
           end
        
