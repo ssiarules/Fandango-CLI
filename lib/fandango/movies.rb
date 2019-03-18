@@ -23,7 +23,7 @@ class Fandango::Movie
      
         
         movie = self.new 
-        movie.name = doc.search("a.heading-style-1.heading-size-s.heading__movie-carousel").text
+        movie.name = doc.search("a.heading-style-1.heading-size-s.heading__movie-carousel")[0].text
         
         movie  
    

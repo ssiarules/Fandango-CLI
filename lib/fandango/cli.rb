@@ -3,6 +3,7 @@
 class Fandango::CLI
     
     def call 
+      puts "Welcome to Fandango! You just made it for the last movie of the evening!"
         list_movies
         menu 
         goodbye
@@ -10,7 +11,7 @@ class Fandango::CLI
 
 
     def list_movies
-      puts "Welcome to Fandango! Any night is a movie night!"
+      
         @movies = Fandango::Movie.today
         @movies.each.with_index(1) do |movie, i|
             puts "#{i}. #{movie.name}"
@@ -29,6 +30,8 @@ class Fandango::CLI
         puts "#{the_movie.name}"
         elsif input == "list"
             list_movies
+        elsif input != "exit"
+          puts "Invalid response."
     else 
         puts "Not sure what you want, type list or exit."
     end 

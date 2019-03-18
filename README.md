@@ -1,16 +1,11 @@
 # Fandango
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fandango`. To experiment with that code, run `bin/console` for an interactive prompt.
+You just made it in time for the Last Movie of the night! 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
 gem 'fandango'
-```
 
 And then execute:
 
@@ -22,7 +17,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To run this program, type ./bin/fandango
+
+You will be greeted by "Welcome to Fandango! You just made it for the last movie of the evening!"
+when you are done, you can type "exit"
 
 ## Development
 
@@ -32,11 +30,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fandango. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ssiarules/Fandango-CLI. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License] https://opensource.org/licenses/MIT
 
 ## Code of Conduct
 
