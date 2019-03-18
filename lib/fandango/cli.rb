@@ -3,7 +3,7 @@
 class Fandango::CLI
     
     def call 
-      puts "Welcome to Fandango! You just made it for the last movie of the evening!"
+      puts "Welcome to Fandango! You just made it for the last movies of the evening!"
         list_movies
         menu 
         goodbye
